@@ -1,0 +1,199 @@
+body {
+  background-color: #f1f7ff;
+  margin: 0px;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+header {
+  margin: 10px;
+}
+
+.navbar a {
+  padding: 20px;
+}
+
+.logo img {
+  height: 6rem;
+  margin: 12px;
+  display: block;
+}
+
+/*Tweak the grid to allow better space balance */
+.tutor-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* changed from 20% */
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  max-width: 100%;
+  max-height: 90vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.tutor-form {
+  text-align: left;
+  max-width: 100%;
+}
+
+.tutor-form p,
+label {
+  text-align: left;
+  font-size: medium;
+}
+
+.tutor-form p {
+  margin-bottom: 30px;
+}
+
+.tutor-form h1 {
+  font-weight: 800;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+/*Make this container flex to keep select + button in same row */
+.tutor-form > div {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#tutorChoiceDisplay {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: flex-start; /* align label to the left */
+  gap: 5px; /* optional spacing between label and select */
+}
+
+
+
+#tutorChoice, #tutorChoice1 {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 25px;
+  border: 2px solid rgb(188, 186, 186);
+  border-radius: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.get-started {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tutor-image {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Top image - the base layer */
+.tutorimage1 {
+  position: relative;
+  width: 80%;
+  z-index: 3;
+}
+
+/* Second image - overlapping from below */
+.tutorimage2 {
+  position: absolute;
+  top: 10%; /* Changed from 10% */
+  left: 15%;
+  width: 65%;
+  z-index: 2;
+}
+
+/* Third image - overlapping further below */
+.tutorimage3 {
+  position: absolute;
+  top: 16%; /* Changed from 20% */
+  left: 10%;
+  width: 55%;
+  z-index: 1;
+}
+
+/* ========== Mobile ========== */
+
+@media (max-width: 480px) {
+  header {
+    margin-bottom: 40px;
+  }
+
+  .logo img {
+    height: 5rem;
+    margin: 12px;
+  }
+
+  .tutor-form {
+    padding-top: 60px;
+  }
+
+  .tutor-form h1 {
+    font-size: 1.6rem;
+    padding: 0 10px;
+  }
+}
+
+/* ========== Tablet ========== */
+@media only screen and (max-width: 768px) {
+  .tutor-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .tutor-form h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: 800;
+  }
+
+  .tutor-form p,
+  label {
+    text-align: left;
+    font-size: small;
+  }
+
+  .tutor-form > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #tutorChoice, #tutorChoice1
+  .get-started {
+    width: 100%;
+  }
+
+  .get-started {
+    margin-top: 15px;
+  }
+
+  .tutor-image {
+    display: none;
+  }
+}
+
+

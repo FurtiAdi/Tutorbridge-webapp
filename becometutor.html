@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="becometutor.css" type="text/css" />
+    <script defer src="becometutor.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"
+          ><img src="/images/logo.PNG" alt="Logo"
+        /></a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 class="title">
+          Start creating your public tutor profile and we will help you find
+          students worldwide.
+        </h1>
+        <form action="#" id="form">
+          <!-- Personal Information -->
+          <fieldset>
+            <p>About</p>
+            <div class="inputs">
+              <label for="firstname">First Name:</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="inputs">
+              <label for="lastname">Last Name:</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+            <div class="inputs">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="inputs">
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="inputs">
+              <label for="select-option">Subject you teach</label>
+              <select name="select-option" id="select-option">
+                <option>Java</option>
+                <option>Kotlin</option>
+                <option>React</option>
+                <option>Backend development</option>
+                <option>Frontend development</option>
+                <option>C++</option>
+                <option>Fullstack development</option>
+                <option>Python</option>
+                <option>C#</option>
+                <option>Web Development</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="language">Language you speak</label>
+              <select name="language" id="language">
+                <option>English</option>
+                <option>French</option>
+                <option>Italy</option>
+                <option>Spanish</option>
+                <option>Swedish</option>
+                <option>Amharic</option>
+                <option>Tigrigna</option>
+                <option>Danish</option>
+                <option>Arabic</option>
+              </select>
+              <label for="level">Level</label>
+              <select name="level" id="level">
+                <option>Native</option>
+              </select>
+
+              <p>What other languages do you speak?</p>
+
+              <div class="select_buttons_lang">
+                <button>Swedish</button>
+                <button>English</button>
+                <button>Arabic</button>
+                <button>Spanish</button>
+                <button>French</button>
+                <button>Italy</button>
+                <button>Danish</button>
+                <button>Tigrigna</button>
+                <button>Amharic</button>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Teaching Certificate -->
+          <fieldset>
+            <p>Teaching certification</p>
+            <p class="session-text3">
+              Do you have teaching certificates? If so, describe them to enhance
+              your profile credibility and get more students.
+            </p>
+            <div id="certification">
+              <input id="checkbox1" type="checkbox" />
+              <label for="checkbox1">I don’t have a teaching certificate</label>
+            </div>
+            <div id="fill-forum1">
+              <div>
+                <label for="tutorChoice">Subject</label>
+                <select name="tutorOption" id="tutorChoice">
+                  <option>English</option>
+                  <option>French</option>
+                  <option>Italy</option>
+                  <option>Spanish</option>
+                  <option>Swedish</option>
+                  <option>Amharic</option>
+                  <option>Tigrigna</option>
+                  <option>Danish</option>
+                  <option>Arabic</option>
+                  <option>C++</option>
+                  <option>Fullstack development</option>
+                  <option>Python</option>
+                  <option>Java</option>
+                  <option>Web Development</option>
+                </select>
+              </div>
+              <div class="inputs">
+                <input type="text" id="fill-certificate" placeholder="Fill verified certificate" required/>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Education -->
+          <fieldset>
+            <p>Education</p>
+            <p class="session-text3">
+              Tell students more about the higher education that you've
+              completed or are working on
+            </p>
+            <div id="education">
+              <input id="checkbox2" type="checkbox" />
+              <label for="checkbox2"
+                >I don’t have a higher education degree</label
+              >
+            </div>
+            <div id="fill-form2">
+              <div class="inputs">
+                <label for="university">University</label>
+                <input
+                  type="text"
+                  id="university"
+                  name="university"
+                  placeholder="E.g. Stockholm University"
+                  required
+                />
+              </div>
+              <div class="inputs">
+                <label for="degree">Degree</label>
+                <input
+                  type="text"
+                  id="degree"
+                  name="degree"
+                  placeholder="E.g. Bachelor's degree in Computer Science"
+                  required
+                />
+              </div>
+              <div>
+                <label for="degreeType">Degree type</label>
+                <select name="degreeType" id="degreeType">
+                  <option>Teaching degree</option>
+                  <option>Degree in the subject I teach</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="inputs">
+                <label
+                  for="speciala
+                ization"
+                  >Specialization</label
+                >
+                <input
+                  type="text"
+                  id="specialization"
+                  name="specialization"
+                  placeholder="E.g. Teaching in Java"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Introduction -->
+          <fieldset>
+            <p>Introduce yourself</p>
+            <p class="session-text3">
+              Show potential students who you are! Share your teaching
+              experience and passion for education and briefly mention your
+              interests and hobbies
+            </p>
+            <textarea
+              name="intro"
+              id="intro"
+              rows="20"
+              placeholder="Hello, my name is.... and I'm from..."
+            ></textarea>
+          </fieldset>
+          <!-- Job Function -->
+          <fieldset>
+            <p>When can you give lessons?</p>
+            <p>Days</p>
+            <div class="select_buttons_days">
+              <button>Mon</button>
+              <button>Tue</button>
+              <button>Wed</button>
+              <button>Thu</button>
+              <button>Fri</button>
+              <button>Sat</button>
+              <button>Sun</button>
+            </div>
+            <p>Times</p>
+            <div class="select_buttons_times">
+              <button>Morning</button>
+              <button>Afternoon</button>
+              <button>Evening</button>
+              <button>Night</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <p>What's your price range?</p>
+            <p id="session-text1">
+              <span id="range1">50</span>kr - <span id="range2">450</span>kr
+            </p>
+
+            <p id="session-text2">per 45-min lesson</p>
+
+            <div class="slider-container">
+              <div class="slider-track"></div>
+              <input
+                type="range"
+                id="slider-1"
+                min="50"
+                max="450"
+                value="50"
+                oninput="slideOne()"
+              />
+              <input
+                type="range"
+                id="slider-2"
+                min="50"
+                max="450"
+                value="450"
+                oninput="slideTwo()"
+              />
+            </div>
+          </fieldset>
+          <button type="submit" id="submit_button">Create profile</button>
+        </form>
+      </section>
+    </main>
+    <div id="thankYouPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Thank you!</h2>
+        <p>
+          We will contact you via email with students who are searching for 
+          <span id="selected-subject-text"></span> lessons in 
+          <span id="selected-lang-text"></span>. You’ll be notified regularly as new matches become available.
+        </p>
+      </div>
+    </div>    
+  </body>
+</html>

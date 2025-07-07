@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutors</title>
+    <script defer src="tutors.js"></script>
+    <link rel="stylesheet" href="tutors.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"><img src="/images/logo.PNG" alt="Logo" /></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tutor-section">
+        <div class="tutor-form">
+          <h1>Find the right <span id="tutor_lang"></span> tutor for you.</h1>
+          <p>
+            Tell us how you’d like to learn to get a personalized choice of
+            tutors
+          </p>
+          
+          <div id="tutorChoiceDisplay">
+            <label for="tutorChoice1">Prefered tutoring language?</label>
+            <select name="tutorOption" id="tutorChoice1">
+              <option>English</option>
+              <option>French</option>
+              <option>Italy</option>
+              <option>Spanish</option>
+              <option>Swedish</option>
+              <option>Amharic</option>
+              <option>Tigrigna</option>
+              <option>Danish</option>
+              <option>Arabic</option>
+            </select>
+          </div>
+          <label for="tutorChoice">What do you want to learn?</label>
+          <div>
+            <select name="tutorOption" id="tutorChoice">
+              <option>Java</option>
+              <option>Kotlin</option>
+              <option>React</option>
+              <option>Backend development</option>
+              <option>Frontend development</option>
+              <option>C++</option>
+              <option>Fullstack development</option>
+              <option>Python</option>
+              <option>C#</option>
+              <option>Web Development</option>
+            </select>
+            <button class="get-started">Get Started</button>
+          </div>
+        </div>
+        <div class="tutor-image">
+          <img
+            class="tutorimage3"
+            src="/images/tutor-image.png"
+            alt="Online tutoring picture"
+          />
+          <img
+            class="tutorimage2"
+            src="/images/tutor-image.png"
+            alt="Online tutoring picture"
+          />
+          <img
+            class="tutorimage1"
+            src="/images/tutor-image.png"
+            alt="Online tutoring picture"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

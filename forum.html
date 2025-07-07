@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="forum.css" type="text/css" />
+    <script defer src="forum.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"><img src="/images/logo.PNG" alt="Logo" /></a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 class="title">
+          Fill the form and we will help you find the right tutor.
+        </h1>
+        <form action="#" id="form">
+          <!-- Personal Information -->
+          <fieldset>
+            <p>Personal Information</p>
+            <div class="inputs">
+              <label for="firstname">First Name:</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="inputs">
+              <label for="lastname">Last Name:</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+            <div class="inputs">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="inputs">
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </fieldset>
+
+          <!-- Goal Information -->
+          <fieldset>
+            <p>What's your goal?</p>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="learn_new"
+                name="goal"
+                value="Learn something new"
+              />
+              <label for="learn_new">Learn something new </label>
+            </div>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="prepare"
+                name="goal"
+                value="Prepare for exams"
+              />
+              <label for="prepare">Prepare for exams </label>
+            </div>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="skill"
+                name="goal"
+                value="Enhance my professional skills"
+              />
+              <label for="skill">Enhance my professional skills </label>
+            </div>
+
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="career"
+                name="goal"
+                value="Advance in my current career"
+              />
+              <label for="career">Advance in my current career </label>
+            </div>
+          </fieldset>
+
+          <!-- Level -->
+          <fieldset>
+            <p>What's your level?</p>
+            <div class="radio-group">
+              <input type="radio" id="beginner" name="level" value="Beginner" />
+              <label for="beginner">Beginner</label>
+            </div>
+
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="Intermidiate"
+                name="level"
+                value="Intermidiate"
+              />
+              <label for="Intermidiate">Intermidiate</label>
+            </div>
+
+            <div class="radio-group">
+              <input type="radio" id="Advanced" name="level" value="Advanced" />
+              <label for="Advanced">Advanced</label>
+            </div>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="professional"
+                name="level"
+                value="professional"
+              />
+              <label for="professional">Professional</label>
+            </div>
+          </fieldset>
+
+          <!-- Special Requirements -->
+          <fieldset>
+            <p>Do you want a tutor who speaks more languages?</p>
+
+            <div class="select_buttons_lang">
+              <button>Swedish</button>
+              <button>English</button>
+              <button>Arabic</button>
+              <button>Spanish</button>
+              <button>French</button>
+              <button>Italy</button>
+            </div>
+          </fieldset>
+
+          <!-- Job Function -->
+          <fieldset>
+            <p>When can you take lessons?</p>
+            <p>Days</p>
+            <div class="select_buttons_days">
+              <button>Mon</button>
+              <button>Tue</button>
+              <button>Wed</button>
+              <button>Thu</button>
+              <button>Fri</button>
+              <button>Sat</button>
+              <button>Sun</button>
+            </div>
+            <p>Times</p>
+            <div class="select_buttons_times">
+              <button>Morning</button>
+              <button>Afternoon</button>
+              <button>Evening</button>
+              <button>Night</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <p>What's your budget?</p>
+            <p id="session-text1">
+              <span id="range1">50</span>kr - <span id="range2">450</span>kr
+            </p>
+
+            <p id="session-text2">per 45-min lesson</p>
+
+            <div class="slider-container">
+              <div class="slider-track"></div>
+              <input
+                type="range"
+                id="slider-1"
+                min="50"
+                max="450"
+                value="50"
+                oninput="slideOne()"
+              />
+              <input
+                type="range"
+                id="slider-2"
+                min="50"
+                max="450"
+                value="450"
+                oninput="slideTwo()"
+              />
+            </div>
+          </fieldset>
+          <button type="submit" id="submit_button">Submit</button>
+        </form>
+      </section>
+    </main>
+    <!-- Popup -->
+    <div id="thankYouPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Thank you!</h2>
+        <p>
+          We will contact you via email once we find your best match tutor for
+          <span id="selected-subject-text"></span> in
+          <span id="selected-lang-text"></span>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
